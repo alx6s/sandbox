@@ -1,4 +1,8 @@
-name: Deploy repository Pages
+name: Deploy Pages
+
+on:
+  push:
+    branches: [*]
 
 workflow_dispatch:
 
@@ -12,43 +16,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    on:
-      pull_request:
-        types:
-          - opened
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22.9.0
-          cache: yarn
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Install dependencies
-        run: yarn 
-      - name: Build
-        run: yarn docs:build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
-
   deploy:
-    on:
-      push:
-        branches: [main]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
