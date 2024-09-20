@@ -3,7 +3,7 @@ name: Deploy Pages
 on:
   workflow_run:
     workflows: ["Build Pages"]
-    branches: 
+    branches: [main]
     types:
       - completed
   workflow_dispatch:
