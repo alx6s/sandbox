@@ -1,11 +1,9 @@
 name: Deploy Pages
 
 on:
-  workflow_run:
-    workflows: ["Build Pages"]
+  workflow_success:
+    workflows: [build_pages]
     branches:
-    types: 
-      - completed
   workflow_dispatch:
 
 permissions:
