@@ -1,8 +1,11 @@
 name: Deploy Pages
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Build Pages"]
     branches:
+    types: 
+      - completed
   workflow_dispatch:
 
 permissions:
