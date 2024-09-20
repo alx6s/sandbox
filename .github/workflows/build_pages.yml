@@ -4,9 +4,8 @@ on:
   pull_request:
     types: [opened]
   push:
-    branches: [*]
-
-workflow_dispatch:
+    branches: 
+  workflow_dispatch:
 
 jobs:
   build:
