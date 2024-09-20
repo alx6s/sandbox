@@ -9,7 +9,6 @@ on:
   workflow_dispatch:
 
 permissions:
-  action: read
   contents: read
   pages: write
   id-token: write
