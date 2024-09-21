@@ -2,7 +2,7 @@ name: Build Pages
 
 on:
   pull_request:
-    types: [edited, opened]
+    types: [opened, synchronize]
 
 jobs:
   build:
