@@ -2,7 +2,7 @@ name: Build Sources
 
 on:
   pull_request:
-    types: [opened]
+    types: [edited, opened]
 
 jobs:
   build:
