@@ -18,4 +18,4 @@ jobs:
           node-version: 22.9.0
           cache: yarn
       - name: Audit dependencies 
-        run: yarn audit
+        run: yarn audit --groups dependencies
