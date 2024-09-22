@@ -17,7 +17,5 @@ jobs:
         with:
           node-version: 22.9.0
           cache: yarn
-      - name: Install dependencies for production
-        run: yarn --production
       - name: Audit dependencies 
         run: yarn audit
