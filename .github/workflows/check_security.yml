@@ -17,10 +17,15 @@ jobs:
         with:
           node-version: 22.9.0
           cache: yarn
-      - uses: actions/upload-artifact@v4
+      - name: Install dependencies for production
+        run: yarn --production
+      - name: Upload depedencies artifacts
+        uses: actions/upload-artifact@v4
         with:
           name: packages
-          path: node_modules/
+          path: |
+            node_modules/
+            package.json
 
   audit: 
     runs-on: ubuntu-latest
