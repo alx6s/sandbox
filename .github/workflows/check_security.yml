@@ -20,4 +20,4 @@ jobs:
       - name: Install dependencies for production
         run: yarn --production
       - name: Audit dependencies 
-        run: yarn npm audit
+        run: yarn audit
