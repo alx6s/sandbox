@@ -12,10 +12,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.9.0
+          cache: yarn
       - uses: actions/upload-artifact@v4
         with:
-          name: package
-          path: package.json
+          name: packages
+          path: |
+            node_modules/
+            package.json
 
   audit: 
     runs-on: ubuntu-latest
@@ -23,6 +30,6 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: package
+          name: packages
       - name: Install dependencies for production
         run: yarn npm audit
