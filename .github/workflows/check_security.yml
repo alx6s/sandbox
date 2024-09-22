@@ -21,7 +21,7 @@ jobs:
         with:
           name: packages
           path: |
-            node_modules/
+            node_modules
             package.json
 
   audit: 
