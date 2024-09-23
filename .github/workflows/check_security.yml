@@ -64,6 +64,7 @@ jobs:
         - name: Scan repository for secrets
           run: |
             cp .secrets.baseline .secrets.new
+            detect-secrets scan --list-all-plugins
             detect-secrets scan --baseline .secrets.new --exclude-files '.secrets.*' --exclude-files '.git*'
             compare_secrets() { diff <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$1" | sort) <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$2" | sort) >/dev/null; }
             if ! compare_secrets .secrets.baseline .secrets.new; then
