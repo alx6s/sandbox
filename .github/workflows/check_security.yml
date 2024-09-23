@@ -21,7 +21,7 @@ jobs:
         run: yarn audit --groups dependencies
 
   semgrep:
-    name: Semgrep
+    name: semgrep
     runs-on: ubuntu-latest
     env:
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
