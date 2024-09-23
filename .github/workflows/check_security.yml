@@ -37,12 +37,8 @@ jobs:
         run: semgrep ci --no-suppress-errors
 
   detect-secrets:
-    name: Checking for Secrets
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Secret scanner
-        uses: secret-scanner/action@main
+    - uses: actions/checkout@v4
+    - name: detect-secrets
+      uses: reviewdog/action-detect-secrets@master
