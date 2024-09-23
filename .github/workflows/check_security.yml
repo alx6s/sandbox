@@ -19,3 +19,21 @@ jobs:
           cache: yarn
       - name: Audit dependencies 
         run: yarn audit --groups dependencies
+
+  semgrep:
+    name: semgrep
+    runs-on: ubuntu-latest
+    env:
+      SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+    container:
+      image: semgrep/semgrep
+    if: (github.actor != 'dependabot[bot]')
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Semgrep scan 
+        run: semgrep ci --no-suppress-errors
+
+ 
