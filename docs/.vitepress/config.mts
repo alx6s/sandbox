@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 
+// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "My Fully Automated API",
   description: "Documentation",
