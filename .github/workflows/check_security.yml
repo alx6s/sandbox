@@ -36,7 +36,7 @@ jobs:
       - name: Semgrep scan 
         run: semgrep ci --no-suppress-errors
 
-   secret-detection:
+  secret-detection:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
