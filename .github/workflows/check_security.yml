@@ -33,5 +33,5 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Semgrep scan 
-        run: semgrep ci --no-suppress-errors
+      - name: Nodejssscan 
+        run: semgrep ci --config="Nodejssscan" --no-suppress-errors
