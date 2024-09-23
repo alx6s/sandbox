@@ -21,8 +21,8 @@ jobs:
         run: yarn audit --groups dependencies
 
   semgrep:
-    name: semgrep/ci
-    runs-on: ubuntu-20.04
+    name: Semgrep
+    runs-on: ubuntu-latest
     env:
       SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
     container:
