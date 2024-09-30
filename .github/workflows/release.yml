@@ -2,9 +2,7 @@ name: Release
 
 on: 
   push:
-    branches: [main]
-  pull_request:
-    types: [opened, synchronize] 
+    branches: [main, ci/release]
 
 jobs:
   release:
