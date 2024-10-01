@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/alx6s/my-faa/compare/v1.0.5...v1.0.6) (2024-10-01)
+
+
+### Bug Fixes
+
+* **release:** remove github plugin cause it's in default ([bc3441b](https://github.com/alx6s/my-faa/commit/bc3441ba6d881838378b4cf65d364b494c639016))
+
 ## [1.0.5](https://github.com/alx6s/my-faa/compare/v1.0.4...v1.0.5) (2024-10-01)
 
 
