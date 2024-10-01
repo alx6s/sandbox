@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/alx6s/my-faa/compare/v1.0.2...v1.0.3) (2024-10-01)
+
+
+### Bug Fixes
+
+* **release:** add npm plugin for packages version update ([625cfe9](https://github.com/alx6s/my-faa/commit/625cfe9ed6460a46725f4c63bda0cd0244e24d10))
+* **release:** do not publish on npm ([e37d32b](https://github.com/alx6s/my-faa/commit/e37d32b22220971cf0b91a9109e20875ba3585a4))
+* **release:** npm plugin config ([9ba194e](https://github.com/alx6s/my-faa/commit/9ba194e60d22a7dc2c539ec506e0bcec3fe86c73))
+
 ## [1.0.2](https://github.com/alx6s/my-faa/compare/v1.0.1...v1.0.2) (2024-10-01)
 
 
