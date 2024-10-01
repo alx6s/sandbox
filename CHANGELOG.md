@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/alx6s/my-faa/compare/v1.0.3...v1.0.4) (2024-10-01)
+
+
+### Bug Fixes
+
+* **release:** add package as assets ([e9f1a06](https://github.com/alx6s/my-faa/commit/e9f1a06528d25e28785d2afb5d11536b1951b5c0))
+
 ## [1.0.3](https://github.com/alx6s/my-faa/compare/v1.0.2...v1.0.3) (2024-10-01)
 
 
