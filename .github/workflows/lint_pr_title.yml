@@ -15,4 +15,4 @@ jobs:
       - name: Install commit-lint
         run: yarn add --dev @commitlint/{cli,config-conventional}
       - name: Lint PR Title
-        run : npx commitlint --from "${{ github.event.pull_request.title }}"
+        run : npx commitlint "${{ github.event.pull_request.title }}"
