@@ -1,0 +1,20 @@
+name: Commit Lint
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize] 
+
+jobs:
+  commit-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v4
+      - name: Install commit-lint
+        run: |
+          yarn add --dev @commitlint/{cli,config-conventional}
+          echo "{'extends': ['@commitlint/config-conventional']}" > .commitlintrc
+      - name: Lint PR Title
+        run: echo "${{ github.event.pull_request.title }}" | npx commitlint
