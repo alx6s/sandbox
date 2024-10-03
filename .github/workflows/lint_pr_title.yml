@@ -13,8 +13,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
       - name: Install commit-lint
-        run: yarn add --dev @commitlint/{cli,config-conventional}
-      - name: Lint PR Title
-        run : |
+        run: |
+          yarn add --dev @commitlint/{cli,config-conventional}
           echo "export default { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
-          echo "${{ github.event.pull_request.title }}" | npx commitlint
+      - name: Lint PR Title
+        run: echo "${{ github.event.pull_request.title }}" | npx commitlint
