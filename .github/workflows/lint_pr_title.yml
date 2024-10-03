@@ -1,0 +1,23 @@
+name: Commit Lint
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          cache: yarn
+      - name: Install commit-lint
+        run: yarn add --dev @commitlint/{cli,config-conventional}
+      - name: Lint PR Title
+        run : |
+          echo "export default { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
+          npx commitlint --from ${{ github.event.pull_request.title }}
