@@ -8,6 +8,8 @@ jobs:
   commit-lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v4
       - name: Install commit-lint
