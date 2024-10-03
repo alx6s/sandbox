@@ -5,7 +5,7 @@ on:
     types: [opened, edited, synchronize] 
 
 jobs:
-  release:
+  commit-lint:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node
@@ -13,6 +13,4 @@ jobs:
       - name: Install commit-lint
         run: yarn add --dev @commitlint/{cli,config-conventional}
       - name: Lint PR Title
-        run : |
-          echo "export default { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
-          npx commitlint --from ${{ github.event.pull_request.title }}
+        run : npx commitlint --from ${{ github.event.pull_request.title }}
