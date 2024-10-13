@@ -1,0 +1,5 @@
+name: 'Test Install Workflow'
+
+jobs:
+  install:
+    uses: alx6s/.github/workflow-templates/node-install.yml@v1.0.0
