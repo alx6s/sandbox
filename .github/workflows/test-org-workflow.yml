@@ -1,5 +1,7 @@
 name: 'Test Install Workflow'
 
+on: [push]
+
 jobs:
   install:
-    uses: alx6s/.github/.github/workflows/node-install.yml@v1.0.2
+    uses: alx6s/.github/.github/workflows/node-install.yml@v1.0.3
