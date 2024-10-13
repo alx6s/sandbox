@@ -9,4 +9,4 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Run Install Action
-        uses: alx6s/my-action@main
+        uses: alx6s/my-action@1.0.1
