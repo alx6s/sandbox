@@ -18,11 +18,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: 'package.json'
-      - name: Enable corepack
+      - name: Use project yarn version
         run: |
           corepack enable &&
           corepack install
       - name: Install
-        run: yarn
+        run: yarn ci
       - name: Build
         run: yarn build
