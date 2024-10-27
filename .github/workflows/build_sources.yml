@@ -20,6 +20,6 @@ jobs:
           node-version: latest
           cache: yarn
       - name: Install dependencies for production
-        run: yarn ci --production
+        run: yarn --production
       - name: Build
         run: yarn build
