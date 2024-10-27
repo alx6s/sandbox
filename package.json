@@ -16,7 +16,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "ci": "yarn --immutable",
-    "upgrade": "yarn upgrade-interactive",
+    "upgrade": "yarn upgrade-interactive"
   },
   "dependencies": {
     "@types/express": "5.0.0",
