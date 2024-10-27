@@ -17,9 +17,9 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: latest
+          node-version-file: '.node-version'
           cache: yarn
-      - name: Install dependencies for production
+      - name: Install
         run: yarn ci
       - name: Build
         run: yarn build
