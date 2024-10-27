@@ -15,9 +15,12 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.node-version'
-          cache: yarn
-      - name: Install dep
-        run: yarn ci
+          node-version-file: 'package.json'
+      - name: Use project yarn version
+        run: |
+          corepack enable &&
+          corepack install
+      - name: Install
+        run: yarn
       - name: Build
         run: yarn docs:build

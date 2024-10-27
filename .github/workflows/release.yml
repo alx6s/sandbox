@@ -17,8 +17,11 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.node-version'
-          cache: yarn
+          node-version-file: 'package.json'
+      - name: Use project yarn version
+        run: |
+          corepack enable &&
+          corepack install
       - name: Install convention
         run: yarn add conventional-changelog-conventionalcommits
       - name: Semantic release

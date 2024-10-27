@@ -13,8 +13,11 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.node-version'
-          cache: yarn
+          node-version-file: 'package.json'
+      - name: Use project yarn version
+        run: |
+          corepack enable &&
+          corepack install
       - name: Install commit lint
         run: |
           yarn add --dev @commitlint/{cli,config-conventional}

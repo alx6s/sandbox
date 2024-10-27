@@ -23,6 +23,6 @@ jobs:
           corepack enable &&
           corepack install
       - name: Install
-        run: yarn ci
+        run: yarn
       - name: Build
         run: yarn build
