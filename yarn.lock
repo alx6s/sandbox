@@ -716,7 +716,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node22@npm:^22.0.0":
+"@tsconfig/node22@npm:22.0.0":
   version: 22.0.0
   resolution: "@tsconfig/node22@npm:22.0.0"
   checksum: 8ff8e32982825d7911918c48207b1b923293a7a4f3002db761a291025a383624bb117ab1fdd829d1e30abb25ddd182c63bbeb9155aa34864a08c6929729770ea
@@ -749,27 +749,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-serve-static-core@npm:^4.17.33":
-  version: 4.19.5
-  resolution: "@types/express-serve-static-core@npm:4.19.5"
+"@types/express-serve-static-core@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "@types/express-serve-static-core@npm:5.0.1"
   dependencies:
     "@types/node": "npm:*"
     "@types/qs": "npm:*"
     "@types/range-parser": "npm:*"
     "@types/send": "npm:*"
-  checksum: f362f5d450526f5b4125b72bf32492b9aa61dc2051c395526a9dac410c4d0a69270761d9973cfc11a0ad5e12baf30db2fc54ff551d004b7383efd77fb636b4d2
+  checksum: 9387eca5672b8788290a6ef380062a95950ee34485d874fbffec1545b1f295f305932e1d27b6a781cca03ce73e47658496d1f20a10371fb039bb257a872620a9
   languageName: node
   linkType: hard
 
-"@types/express@npm:^4.17.21":
-  version: 4.17.21
-  resolution: "@types/express@npm:4.17.21"
+"@types/express@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@types/express@npm:5.0.0"
   dependencies:
     "@types/body-parser": "npm:*"
-    "@types/express-serve-static-core": "npm:^4.17.33"
+    "@types/express-serve-static-core": "npm:^5.0.0"
     "@types/qs": "npm:*"
     "@types/serve-static": "npm:*"
-  checksum: f3f62e95a9234828153bf3d2706cbe6ae929ae66c80bcd207f106b925199f24ba240a018b24d6fc6b57f1f7155c92f17e931940ba55b283f1308c607a7f66804
+  checksum: e2e05f077248cdf6be53fa2314a829f7b0564a75bc00791fa70049425bcded0f22ab5110303c79c100d9af09171fb29513a725006725addff6256246c176c47c
   languageName: node
   linkType: hard
 
@@ -1470,7 +1470,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^8.0.0":
+"conventional-changelog-conventionalcommits@npm:8.0.0":
   version: 8.0.0
   resolution: "conventional-changelog-conventionalcommits@npm:8.0.0"
   dependencies:
@@ -1822,7 +1822,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express@npm:^5.0.0":
+"express@npm:5.0.1":
   version: 5.0.1
   resolution: "express@npm:5.0.1"
   dependencies:
@@ -2667,7 +2667,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemon@npm:^3.1.7":
+"nodemon@npm:3.1.7":
   version: 3.1.7
   resolution: "nodemon@npm:3.1.7"
   dependencies:
@@ -3020,14 +3020,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sandbox@workspace:."
   dependencies:
-    "@tsconfig/node22": "npm:^22.0.0"
-    "@types/express": "npm:^4.17.21"
-    conventional-changelog-conventionalcommits: "npm:^8.0.0"
-    express: "npm:^5.0.0"
-    nodemon: "npm:^3.1.7"
-    ts-node: "npm:^10.9.2"
-    typescript: "npm:^5.6.2"
-    vitepress: "npm:^1.3.4"
+    "@tsconfig/node22": "npm:22.0.0"
+    "@types/express": "npm:5.0.0"
+    conventional-changelog-conventionalcommits: "npm:8.0.0"
+    express: "npm:5.0.1"
+    nodemon: "npm:3.1.7"
+    ts-node: "npm:10.9.2"
+    typescript: "npm:5.6.3"
+    vitepress: "npm:1.4.1"
   languageName: unknown
   linkType: soft
 
@@ -3351,7 +3351,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.9.2":
+"ts-node@npm:10.9.2":
   version: 10.9.2
   resolution: "ts-node@npm:10.9.2"
   dependencies:
@@ -3410,7 +3410,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.6.2":
+"typescript@npm:5.6.3":
   version: 5.6.3
   resolution: "typescript@npm:5.6.3"
   bin:
@@ -3420,7 +3420,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.6.2#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>":
   version: 5.6.3
   resolution: "typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=77c9e2"
   bin:
@@ -3601,7 +3601,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitepress@npm:^1.3.4":
+"vitepress@npm:1.4.1":
   version: 1.4.1
   resolution: "vitepress@npm:1.4.1"
   dependencies:
