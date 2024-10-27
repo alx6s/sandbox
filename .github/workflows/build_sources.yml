@@ -19,6 +19,8 @@ jobs:
         with:
           node-version-file: 'package.json'
           cache: yarn
+      - name: Enable corepack
+        run: corepack enable 
       - name: Install
         run: yarn ci
       - name: Build
