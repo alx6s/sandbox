@@ -23,4 +23,4 @@ jobs:
           yarn add --dev @commitlint/{cli,config-conventional}
           echo "{'extends': ['@commitlint/config-conventional']}" > .commitlintrc
       - name: Lint pull request title
-        run: echo "${{ github.event.pull_request.title }}" | npx commitlint
+        run: echo "${{ github.event.pull_request.title }}" | yarn commitlint
