@@ -20,12 +20,6 @@ jobs:
         run: |
           corepack enable &&
           corepack install
-        with:
-          node-version-file: 'package.json'
-      - name: Use project yarn version
-        run: |
-          corepack enable &&
-          corepack install
       - name: Install
         run: yarn
       - name: Audit dep
