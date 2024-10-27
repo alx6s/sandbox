@@ -10,16 +10,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Node
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22.9.0
+          node-version: latest
           cache: yarn
       - name: Install dependencies for production
-        run: yarn --production
+        run: yarn ci --production
       - name: Build
         run: yarn build

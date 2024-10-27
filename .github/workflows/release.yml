@@ -12,16 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Setup Node
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22.9.0
+          node-version: latest
           cache: yarn
-      - name: Install conventional-changelog-conventionalcommits
+      - name: Install convention
         run: yarn add conventional-changelog-conventionalcommits
-      - name: Semantic Release
+      - name: Semantic release
         uses: cycjimmy/semantic-release-action@v4
         with:
           extra_plugins: |

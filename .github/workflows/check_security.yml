@@ -8,16 +8,16 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Node
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22.9.0
+          node-version: latest
           cache: yarn
-      - name: Audit dependencies 
+      - name: Audit dep
         run: yarn audit --groups dependencies
 
   semgrep:
@@ -29,7 +29,7 @@ jobs:
       image: semgrep/semgrep
     if: (github.actor != 'dependabot[bot]')
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0

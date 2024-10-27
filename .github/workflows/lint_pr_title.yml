@@ -8,13 +8,13 @@ jobs:
   commit-lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Setup Node
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup node
         uses: actions/setup-node@v4
-      - name: Install commit-lint
+      - name: Install commit lint
         run: |
           yarn add --dev @commitlint/{cli,config-conventional}
           echo "{'extends': ['@commitlint/config-conventional']}" > .commitlintrc
-      - name: Lint PR Title
+      - name: Lint pull request title
         run: echo "${{ github.event.pull_request.title }}" | npx commitlint
