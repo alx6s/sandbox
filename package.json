@@ -26,6 +26,5 @@
   "engines": {
     "node": "23.1.0",
     "yarn": "4.5.1"
-  },
-  "packageManager": "yarn@4.5.1"
+  }
 }
