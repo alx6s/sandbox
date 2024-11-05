@@ -8,17 +8,22 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Node
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22.9.0
-          cache: yarn
-      - name: Audit dependencies 
-        run: yarn audit --groups dependencies
+          node-version-file: 'package.json'
+      - name: Use project yarn version
+        run: |
+          corepack enable &&
+          corepack install
+      - name: Install
+        run: yarn
+      - name: Audit dep
+        run: yarn npm audit --environment production
 
   semgrep:
     name: semgrep
@@ -29,7 +34,7 @@ jobs:
       image: semgrep/semgrep
     if: (github.actor != 'dependabot[bot]')
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0

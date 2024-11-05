@@ -17,19 +17,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Node
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22.9.0
-          cache: yarn
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Install dependencies
-        run: yarn 
+          node-version-file: 'package.json'
+      - name: Use project yarn version
+        run: |
+          corepack enable &&
+          corepack install
+      - name: Install
+        run: yarn
       - name: Build
         run: yarn docs:build
       - name: Upload artifact
@@ -44,6 +45,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to gitHub pages
         id: deployment
         uses: actions/deploy-pages@v4
