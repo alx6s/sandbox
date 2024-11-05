@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "My Fully Automated API",
+  title: "Sandbox",
   description: "Documentation",
   themeConfig: {
     nav: [
@@ -23,5 +23,5 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   },
-  base: '/my-faa/'
+  base: '/sandbox/'
 })
