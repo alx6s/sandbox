@@ -23,7 +23,7 @@ jobs:
       - name: Install
         run: yarn
       - name: Audit dep
-        run: yarn audit --groups dependencies
+        run: yarn npm audit --environment production
 
   semgrep:
     name: semgrep
