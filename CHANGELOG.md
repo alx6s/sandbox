@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/alx6s/sandbox/compare/v1.0.6...v1.0.7) (2024-12-20)
+
+
+### Bug Fixes
+
+* **docs:** base url ([#10](https://github.com/alx6s/sandbox/issues/10)) ([3bdf52b](https://github.com/alx6s/sandbox/commit/3bdf52bcedaf64a9c76e62023935410d357b5702))
+
 ## [1.0.6](https://github.com/alx6s/my-faa/compare/v1.0.5...v1.0.6) (2024-10-01)
 
 
