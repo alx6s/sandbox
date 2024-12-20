@@ -1,4 +1,4 @@
-name: Commit Lint
+name: Lint pull request title
 
 on:
   pull_request:
@@ -22,5 +22,5 @@ jobs:
         run: |
           yarn add --dev @commitlint/{cli,config-conventional}
           echo "{'extends': ['@commitlint/config-conventional']}" > .commitlintrc
-      - name: Lint pull request title
+      - name: Lint
         run: echo "${{ github.event.pull_request.title }}" | yarn commitlint

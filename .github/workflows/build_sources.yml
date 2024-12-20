@@ -1,4 +1,4 @@
-name: Build Sources
+name: Build sources
 
 on:
   pull_request:
