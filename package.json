@@ -1,7 +1,7 @@
 {
   "name": "sandbox",
   "devDependencies": {
-    "@tsconfig/node22": "22.0.0",
+    "@tsconfig/node22": "22.0.1",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "nodemon": "3.1.9",
     "ts-node": "10.9.2",
